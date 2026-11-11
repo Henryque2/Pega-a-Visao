@@ -280,3 +280,53 @@ section>h2{background:#fff!important;border-bottom:2px solid #000!important}sect
 .hint kbd{display:inline-block;line-height:1.3;margin:0 .1rem}
 :root.bigbtn .tbi>button,:root.bigbtn .tts>button{min-height:68px}
 @media (min-width:1024px){.tbi>button{flex:none;padding:.3rem .4rem}}
+
+/* ===== Modo Noite: site de games dos anos 2000 (EA, GameSpot, Conspiracy, Newgrounds) ===== */
+:root:not([data-theme]){--text:#f1f1f1;--muted:#cfd3d8;--card:#17191c;--border:#8d949c;--accent:#4fd6ff;--y:#ffb21c;--focus:#4fd6ff}
+:root:not([data-theme]):not(.simple) body{background:radial-gradient(ellipse at 50% -10%,#5a0c0c88,transparent 55%),radial-gradient(#242628 1px,transparent 1.6px) 0 0/7px 7px,#050505 fixed}
+:root:not([data-theme]):not(.simple) body::before{background:repeating-linear-gradient(0deg,#ffffff08 0 1px,transparent 1px 22px),repeating-linear-gradient(90deg,#ffffff08 0 1px,transparent 1px 22px)}
+:root:not([data-theme]):not(.simple) .bars i{width:46px;height:16px;border-radius:8px;opacity:1;background:radial-gradient(ellipse at 50% 30%,#ff9a8a,#ff2a1a 55%,#7a0000);box-shadow:0 0 14px #ff2a1a,inset 0 -2px 3px #0008}
+:root:not([data-theme]):not(.simple) .bars i:nth-child(2){width:16px;height:46px;background:radial-gradient(ellipse at 30% 50%,#fff0a0,#ffb21c 55%,#8a4a00);box-shadow:0 0 14px #ffb21c}
+:root:not([data-theme]):not(.simple) .bars i:nth-child(4){width:46px;height:16px;background:radial-gradient(ellipse at 50% 30%,#a8ffb4,#2fe04a 55%,#0a5a14);box-shadow:0 0 14px #2fe04a}
+:root:not([data-theme]):not(.simple):not(.noanim) .bars i{animation:ledblink 2.4s steps(1) infinite}
+:root:not([data-theme]):not(.simple):not(.noanim) .bars i:nth-child(2){animation-delay:-.7s}:root:not([data-theme]):not(.simple):not(.noanim) .bars i:nth-child(3){animation-delay:-1.3s}:root:not([data-theme]):not(.simple):not(.noanim) .bars i:nth-child(4){animation-delay:-.2s}:root:not([data-theme]):not(.simple):not(.noanim) .bars i:nth-child(5){animation-delay:-1.8s}
+@keyframes ledblink{0%{opacity:1}50%{opacity:.25}}
+:root:not([data-theme]) section,:root:not([data-theme]) header.hero,:root:not([data-theme]) .tools{border:2px solid;border-color:#9aa1a8 #1d2023 #1d2023 #9aa1a8;border-radius:6px}
+:root:not([data-theme]):not(.simple) section,:root:not([data-theme]):not(.simple) .tools{background:radial-gradient(circle at 9px 9px,#eef0f2 0 1.5px,#7a8087 2.6px,#101010 3.6px,transparent 4.6px) no-repeat,radial-gradient(circle at calc(100% - 9px) 9px,#eef0f2 0 1.5px,#7a8087 2.6px,#101010 3.6px,transparent 4.6px) no-repeat,radial-gradient(circle at 9px calc(100% - 9px),#eef0f2 0 1.5px,#7a8087 2.6px,#101010 3.6px,transparent 4.6px) no-repeat,radial-gradient(circle at calc(100% - 9px) calc(100% - 9px),#eef0f2 0 1.5px,#7a8087 2.6px,#101010 3.6px,transparent 4.6px) no-repeat,linear-gradient(180deg,#34383d,#16181b);box-shadow:0 0 0 3px #000,5px 5px 0 3px #000a,inset 0 0 0 1px #000}
+:root:not([data-theme]):not(.simple) header.hero{background:repeating-linear-gradient(45deg,#ffcc00 0 10px,#111 10px 20px) 0 0/100% 10px no-repeat,radial-gradient(circle at 9px 9px,#eef0f2 0 1.5px,#7a8087 2.6px,#101010 3.6px,transparent 4.6px) no-repeat,radial-gradient(circle at calc(100% - 9px) 9px,#eef0f2 0 1.5px,#7a8087 2.6px,#101010 3.6px,transparent 4.6px) no-repeat,radial-gradient(circle at 9px calc(100% - 9px),#eef0f2 0 1.5px,#7a8087 2.6px,#101010 3.6px,transparent 4.6px) no-repeat,radial-gradient(circle at calc(100% - 9px) calc(100% - 9px),#eef0f2 0 1.5px,#7a8087 2.6px,#101010 3.6px,transparent 4.6px) no-repeat,linear-gradient(180deg,#34383d,#16181b);box-shadow:0 0 0 3px #000,5px 5px 0 3px #000a,inset 0 0 0 1px #000;padding-top:1.9rem}
+:root:not([data-theme]) section>h2{background:linear-gradient(180deg,#ff5a48 0,#d01010 48%,#8c0000 52%,#b80d0d 100%);color:#fff;font-size:1.1rem;text-shadow:1px 1px 0 #000;border-bottom:2px solid #000;padding:.45rem .9rem}
+:root:not([data-theme]):not(.cf) section>h2{font-family:Verdana,Tahoma,sans-serif}
+:root:not([data-theme]):not(.simple) section>h2::after{content:''/'';width:10px;height:10px;padding:0;margin-right:30px;border:0;border-radius:50%;background:#ff3b2f;box-shadow:0 0 6px #ff3b2f,16px 0 0 #ffb21c,32px 0 0 #3ddc4a,16px 0 6px #ffb21c,32px 0 6px #3ddc4a;font:0/0 sans-serif;letter-spacing:0}
+:root:not([data-theme]) .tip{background:linear-gradient(180deg,#0b0c0e,#15171a);border:1px solid #4a5057;border-radius:3px;box-shadow:inset 0 0 0 1px #000}
+:root:not([data-theme]) .tip h3{color:#ffb21c;text-shadow:1px 1px 0 #000}
+:root:not([data-theme]) .tip h3::before{color:#ff3b2f}
+:root:not([data-theme]) details.f{background:#0b0c0e;border:1px solid #4a5057;border-radius:3px}
+:root:not([data-theme]) .sample div{border-radius:3px}
+:root:not([data-theme]) button:not(.eyes){background:linear-gradient(180deg,#7a8087 0,#41454b 48%,#24272b 52%,#363a40 100%);color:#fff;border:1px solid #aab1b8;border-radius:4px;text-shadow:1px 1px 0 #000;box-shadow:inset 0 1px 0 #ffffff55}
+:root:not([data-theme]) button:not(.eyes):hover{filter:brightness(1.2)}
+:root:not([data-theme]) button:not(.eyes):active{background:linear-gradient(180deg,#24272b,#41454b)}
+:root:not([data-theme]) button:not(.eyes)[aria-pressed=true]{background:linear-gradient(180deg,#ff5a48 0,#d01010 48%,#8c0000 52%,#b80d0d 100%);color:#fff;border-color:#ffb3aa;text-shadow:1px 1px 0 #000;outline:3px solid #ffb21c;outline-offset:1px}
+:root:not([data-theme]) nav.menu a{background:linear-gradient(180deg,#ff5a48 0,#d01010 48%,#8c0000 52%,#b80d0d 100%);color:#fff;border:1px solid #000;border-radius:4px 4px 0 0;text-shadow:1px 1px 0 #000;box-shadow:inset 0 1px 0 #ff9a90,0 2px 0 #000}
+:root:not([data-theme]) nav.menu a:hover,:root:not([data-theme]) nav.menu a:focus-visible{background:linear-gradient(180deg,#ffd35a 0,#ff9d1c 48%,#c75a00 52%,#e07800 100%);color:#000;text-shadow:none;box-shadow:inset 0 1px 0 #fff8,0 2px 0 #000}
+:root:not([data-theme]):not(.cf) .hero h1{font-family:Impact,'Arial Black',Verdana,sans-serif;font-style:italic;font-weight:900;text-transform:uppercase;letter-spacing:.03em;font-size:clamp(2.2rem,8vw,3.8rem)}
+:root:not([data-theme]) .hero h1{background:linear-gradient(180deg,#fff 0,#d6ecff 42%,#3f9fe6 52%,#bfe3ff 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent;text-shadow:none;filter:drop-shadow(2px 2px 0 #000) drop-shadow(0 0 10px #1a9bff99)}
+:root:not([data-theme]) .tag{background:#ffb21c;color:#000;border:1px solid #000;border-radius:2px;font-style:normal;font-size:.9rem;box-shadow:2px 2px 0 #000}
+:root:not([data-theme]):not(.cf) .tag,:root:not([data-theme]):not(.cf) .cons label{font-family:Verdana,Tahoma,sans-serif}
+:root:not([data-theme]) .cons{background:#0b0c0e;border-top:3px solid #d01010;border-bottom:3px solid #000}
+:root:not([data-theme]) .cons label{font-style:normal;color:#fff;font-size:1.05rem;text-shadow:1px 1px 0 #000}
+:root:not([data-theme]) .cons input{background:#000;color:#fff;border:2px inset #666;border-radius:2px}
+:root:not([data-theme]) .ticker{background:#000;color:#ffb21c;border:2px inset #666;border-radius:2px}
+:root:not([data-theme]):not(.simple) hr.rb{height:10px;background:repeating-linear-gradient(45deg,#ffcc00 0 10px,#111 10px 20px);border-top:1px solid #000;border-bottom:1px solid #000}
+:root:not([data-theme]) .obra{background:#000;color:#ffcc00}
+:root:not([data-theme]) footer{background:#17191c;border:2px solid;border-color:#9aa1a8 #1d2023 #1d2023 #9aa1a8;border-radius:6px;overflow:hidden}
+:root:not([data-theme]):not(.simple) footer::before{content:'';display:block;height:16px;margin:-1rem -1rem .9rem;background:conic-gradient(#000 25%,#fff 0 50%,#000 0 75%,#fff 0) 0 0/16px 16px;border-bottom:2px solid #000}
+:root:not([data-theme]) .led{color:#ff3b2f;text-shadow:0 0 8px #f00;border:2px inset #555}
+:root:not([data-theme]) .bar div{background:repeating-linear-gradient(90deg,#ff6a1a 0 14px,#b80f0f 14px 18px)}
+@media print{.hero h1{-webkit-text-fill-color:#000!important;background:none!important;filter:none!important}}
+
+/* ===== Texto justificado e botõezinhos do título sempre no lugar ===== */
+main p,main dd,main li,main details p,.hero p{text-align:justify;text-justify:inter-word;hyphens:auto;-webkit-hyphens:auto;overflow-wrap:break-word}
+.hero p{text-align:justify}
+section>h2{align-items:center}
+section>h2::before{flex:none}
+section>h2::after{flex:none;white-space:nowrap;line-height:1.2}
