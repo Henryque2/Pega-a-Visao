@@ -2,7 +2,7 @@
 var R=document.documentElement,fs=1.1,K='vc_',$=function(i){return document.getElementById(i)};
 function sv(k,v){try{localStorage.setItem(K+k,v)}catch(e){}}
 function ld(k){try{return localStorage.getItem(K+k)}catch(e){return null}}
-function setFs(v){fs=Math.min(2.2,Math.max(.9,v));R.style.setProperty('--fs',fs+'rem');sv('fs',fs)}
+function setFs(v){fs=Math.min(2.2,Math.max(.9,v));R.style.setProperty('--fs',fs+'rem');R.style.setProperty('--k',fs/1.1);sv('fs',fs)}
 $('inc').onclick=function(){setFs(fs+.15)};$('dec').onclick=function(){setFs(fs-.15)};
 var tb=document.querySelectorAll('[data-t]');
 function setT(t){if(t==='dark')R.removeAttribute('data-theme');else R.setAttribute('data-theme',t);tb.forEach(function(b){b.setAttribute('aria-pressed',b.dataset.t===t)});sv('t',t)}
@@ -22,8 +22,8 @@ function stop(){tok++;if(S)S.cancel();qi=0;paused=false;if(hl)hl.classList.remov
 tts.onclick=function(){if(!S){alert('Seu navegador não tem leitura em voz alta.');return}stop();build();tts.setAttribute('aria-pressed','true');setTimeout(say,150)};
 $('tx').onclick=stop;
 $('tp').onclick=function(){if(!S||!Q.length)return;if(paused){paused=false;setTimeout(say,150)}else if(tts.getAttribute('aria-pressed')==='true'){paused=true;tok++;S.cancel()}};
-var fonts=[['Tahoma','Tahoma,Verdana,sans-serif'],['Arial','Arial,Helvetica,sans-serif'],['Comic Sans','"Comic Sans MS","Comic Neue",sans-serif'],['Pixel','"Pixelify Sans","MS Sans Serif",Tahoma,sans-serif'],['Atkinson','"Atkinson Hyperlegible",Verdana,sans-serif']],fi=0,ft=$('ft');
-function setF(i){fi=i;R.classList.toggle('pixfont',i===3);R.classList.toggle('cf',i>0);document.body.style.fontFamily=fonts[i][1];ft.textContent='Fonte: '+fonts[i][0];sv('ft',i)}
+var fonts=[['Padrão','Tahoma,Verdana,sans-serif'],['Arial','Arial,Helvetica,sans-serif'],['Comic Sans','"Comic Sans MS","Comic Neue",sans-serif'],['Pixel','"Pixelify Sans","MS Sans Serif",Tahoma,sans-serif'],['Atkinson','"Atkinson Hyperlegible",Verdana,sans-serif']],fi=0,ft=$('ft');
+function setF(i){fi=i;R.classList.toggle('pixfont',i===3);R.classList.toggle('cf',i>0);document.body.style.fontFamily=i?fonts[i][1]:'';ft.textContent='Fonte: '+fonts[i][0];sv('ft',i)}
 ft.onclick=function(){setF((fi+1)%5)};
 var rb=document.createElement('div');rb.className='ruler';rb.hidden=true;document.body.appendChild(rb);
 function mv(y){rb.style.top=(y-28)+'px'}
